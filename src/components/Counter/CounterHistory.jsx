@@ -23,8 +23,9 @@ export default function CounterHistory({ history }) {
 
   return (
     <ol>
-      {history.map((count, index) => (
-        <HistoryItem key={index} count={count} />
+      {history.map((count) => (
+        // ! Now we clearly identifies the key of the unique component
+        <HistoryItem key={count.id} count={count.value} />
       ))}
     </ol>
   );
